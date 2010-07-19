@@ -1,0 +1,24 @@
+= twin_validator
+
+A simple twin field validator for Rails 3.
+
+  gem sources -a http://gemcutter.org/
+  gem install twin_validator
+
+== What is a twin field?
+
+A twin field is a field that has a useless value unless a previous field has been set. This often manifiests itself as checkbox/text field or select/text field pair. Think in terms of a select box with one option for 'Other'; the 'Other' option should show a text box, validated only when it it set as such.
+
+You can validate the text field only when the previous field is set to your chosen value. Jump into your model and validate like so:
+
+  validates :field, :inclusion => { :in => [true, false }
+  validates :other_field, :twin => { :twins => [:field] }
+
+For now, the only options you can use are:
+
+  :twins # An Enumerable of symbols to resolve as attributes of the model.
+  :check_against # A value that, if the twins are set to, this model should be validated as a result.
+
+== Copyright
+
+Copyright (c) 2010 Nathan Kleyn. See LICENSE for details.
