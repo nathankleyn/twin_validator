@@ -12,9 +12,6 @@ begin
     gem.authors = ["Nathan Kleyn"]
 
     gem.add_dependency 'activemodel', '>= 3.0.0.beta4'
-
-    gem.add_development_dependency "rspec", '>= 2.0.0.beta.12'
-    gem.add_development_dependency "activesupport", '>= 3.0.0.beta4'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

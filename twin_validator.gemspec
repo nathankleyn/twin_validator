@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Nathan Kleyn"]
-  s.date = %q{2010-06-20}
+  s.date = %q{2010-07-19}
   s.description = %q{A simple twin field validator for Rails 3.}
   s.email = %q{nathan@unfinitydesign.com}
   s.extra_rdoc_files = [
@@ -46,17 +46,11 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activemodel>, [">= 3.0.0.beta4"])
-      s.add_development_dependency(%q<rspec>, [">= 2.0.0.beta.12"])
-      s.add_development_dependency(%q<activesupport>, [">= 3.0.0.beta4"])
     else
       s.add_dependency(%q<activemodel>, [">= 3.0.0.beta4"])
-      s.add_dependency(%q<rspec>, [">= 2.0.0.beta.12"])
-      s.add_dependency(%q<activesupport>, [">= 3.0.0.beta4"])
     end
   else
     s.add_dependency(%q<activemodel>, [">= 3.0.0.beta4"])
-    s.add_dependency(%q<rspec>, [">= 2.0.0.beta.12"])
-    s.add_dependency(%q<activesupport>, [">= 3.0.0.beta4"])
   end
 end
 
